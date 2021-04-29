@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;1,600;1,700;1,800&display=swap" rel="stylesheet">   
+    <script src="https://kit.fontawesome.com/19cadd1482.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <img src="images/cart1.jpg" alt="" class="cart">
+            <nav>
+                <ul>
+                    <li><a href="">home </a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href="">services</a></li>
+                    <li><a href="">category</a></li>
+                </ul>
+            </nav>
+            <img src="images/logo.png" alt="" class="logo">
+        </div>
+        <div class="content">
+            <a href="" class="btn">2020 collections</a>
+            <h1>you should always <br>feel pretty</h1>
+            <p>porro! Illum sit esse consequatur aliquid temporibus deleniti debitis?</p>
+            <div class="icons">
+                <img src="images/back-arrow.png" id="prev"alt="" srcset="">
+                <img src="images/next-arrow.png" id="next" alt="" srcset="">
+            </div>
+        </div>
+        <img src="images/woman.png" id="img" alt="" class="image">
+        <div class="social">
+        
+           <a href="http://"><i class="fab fa-facebook fa-3x" style="color: dodgerblue;"></i></a> 
+           <a href="http://"><i class="fab fa-twitter fa-3x" style="color: cornflowerblue;"></i></a> 
+           <a href="http://"><i class="fab fa-github fa-3x"></i></a> 
+
+        </div>
+    </div>
+    <script>
+        let prev = document.getElementById('prev');
+        let next = document.getElementById('next');
+        let img = document.getElementById('img');
+        images = ["img.png","woman.png"];
+        i = 0;
+        console.log(images.length)
+        next.onclick =  function (){            
+    if(i >= (images.length -1))
+    i= -1;
+    
+    i++;
+    change();
+    }
+
+prev.onclick = function(){
+    if(i<= 0)
+    i = images.length;
+    i--;
+    change();
+}
+
+
+
+function change(){
+ return   img.setAttribute('src','images/' + images[i]),
+    img.style.boxShadow="0PX 10PX 20PX black";
+
+};
+
+    </script>
+</body>
+</html>
